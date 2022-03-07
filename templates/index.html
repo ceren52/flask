@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div  class= "jumbotron text-center"  > 
+
+<h3>İlk Deneme Bloğu</h3>
+<p>Bu blogta kendinizi geliştirebilirsiniz</p>
+</div>
+
+{% if answer == "evet" %}
+
+<p> Cevap evet </p>
+
+{% else %}
+
+<p>Cevap evet değil</p>
+
+{% endif %}
+
+<ul>
+{% for article in articles  %}
+<li>Article id: {{article.id }} - Title: {{article.title}} - Content: {{article.content}} </li>
+{% endfor %}
+</ul>
+
+{% endblock body %}
+
+
+
+
+
